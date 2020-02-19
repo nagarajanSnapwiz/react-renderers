@@ -1,24 +1,20 @@
 import React from 'react';
+import PixiApp from './pixi.app';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      logo : {logo}
+      <PixiApp>
+        <container>
+          <sprite from={logo} x={30} />
+          <sprite from={logo} x={80} />
+          <sprite from={logo} x={130} />
+        </container>
+
+      </PixiApp>
     </div>
   );
 }
