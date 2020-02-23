@@ -27,8 +27,9 @@ export function useLoader(resources) {
 
 export default function PixiApp(props) {
     const domRef = useRef();
-    const appRef = useRef(new Application(props));
+    const appRef = useRef();
     useLayoutEffect(() => {
+        appRef.current = new Application(props);
         domRef.current.appendChild(appRef.current.view);
         PixiRenderer.render(props.children, appRef.current);
 
